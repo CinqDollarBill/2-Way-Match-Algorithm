@@ -32,7 +32,7 @@ void findCoordinates(int n, int k, int fileA[n][k], int fileB[n][k], int target,
 
     for (int a_i = 0; a_i < n; a_i++) {  
         for (int a_j = 0; a_j < k; a_j++) {  
-            int match = fileA[a_i][a_j];  
+            int match = 100 - fileA[a_i][a_j]; // The difference between target and item a will result in the correct sum needed in B  
             int found = 0;  
 
             for (int b_i = 0; b_i < n && !found; b_i++) {  
